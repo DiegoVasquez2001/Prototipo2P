@@ -64,12 +64,27 @@ public class FrmContenedor extends javax.swing.JFrame {
         MCat.setText("Catálogos");
 
         MIMarc.setText("Marcas");
+        MIMarc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MIMarcActionPerformed(evt);
+            }
+        });
         MCat.add(MIMarc);
 
         MILin.setText("Líneas");
+        MILin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MILinActionPerformed(evt);
+            }
+        });
         MCat.add(MILin);
 
         MIBod.setText("Bodegas");
+        MIBod.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MIBodActionPerformed(evt);
+            }
+        });
         MCat.add(MIBod);
 
         MIProv.setText("Proveedores");
@@ -108,6 +123,24 @@ public class FrmContenedor extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void MIBodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MIBodActionPerformed
+        FrmMantBod frmMB = new FrmMantBod();
+        frmMB.setVisible(true);
+        DP_Workbench.add(frmMB);
+    }//GEN-LAST:event_MIBodActionPerformed
+
+    private void MIMarcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MIMarcActionPerformed
+        FrmMantMarc frmMM = new FrmMantMarc();
+        frmMM.setVisible(true);
+        DP_Workbench.add(frmMM);
+    }//GEN-LAST:event_MIMarcActionPerformed
+
+    private void MILinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MILinActionPerformed
+        FrmMantLin frmML = new FrmMantLin();
+        frmML.setVisible(true);
+        DP_Workbench.add(frmML);
+    }//GEN-LAST:event_MILinActionPerformed
 
     /**
      * @param args the command line arguments

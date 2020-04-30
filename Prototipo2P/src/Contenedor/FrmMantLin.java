@@ -5,6 +5,14 @@
  */
 package Contenedor;
 
+import java.awt.HeadlessException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author diego
@@ -53,14 +61,34 @@ public class FrmMantLin extends javax.swing.JInternalFrame {
         jLabel3.setText("Estatus Línea:");
 
         BtnAlta.setText("Alta");
+        BtnAlta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnAltaActionPerformed(evt);
+            }
+        });
 
         BtnBaja.setText("Baja");
+        BtnBaja.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnBajaActionPerformed(evt);
+            }
+        });
 
         BtnCambio.setText("Cambio");
+        BtnCambio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnCambioActionPerformed(evt);
+            }
+        });
 
         jLabel4.setText("Código Línea:");
 
         BtnBuscar.setText("Buscar");
+        BtnBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnBuscarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -141,6 +169,83 @@ public class FrmMantLin extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void BtnAltaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAltaActionPerformed
+        try{
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/sic", "root", "informaticdv2016");
+            PreparedStatement pst = cn.prepareStatement("insert into lineas values(?,?,?)");
+            
+            pst.setString(1, TxtCodLin.getText().trim());
+            pst.setString(2, TxtNomLin.getText().trim());
+            pst.setString(3, TxtEstLin.getText().trim());
+            pst.executeUpdate();
+            JOptionPane.showMessageDialog(null, "REGISTRO REALIZADO!");
+            TxtCodLin.setText("");
+            TxtNomLin.setText("");
+            TxtEstLin.setText("");
+        }catch (HeadlessException | SQLException e){
+            JOptionPane.showMessageDialog(null, e.toString());
+        }
+    }//GEN-LAST:event_BtnAltaActionPerformed
+
+    private void BtnBajaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBajaActionPerformed
+        try {
+             Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/sic", "root", "informaticdv2016");
+            PreparedStatement pst = cn.prepareStatement("delete from lineas where codigo_linea = ?");
+            
+            pst.setString(1, TxtBuscar.getText().trim());
+            pst.executeUpdate();
+            
+            TxtCodLin.setText("");
+            TxtNomLin.setText("");
+            TxtEstLin.setText("");
+            TxtBuscar.setText("");
+            
+            JOptionPane.showMessageDialog(null, "REGISTRO REMOVIDO!");
+            
+        } catch (HeadlessException | SQLException e) {
+            JOptionPane.showMessageDialog(null, e.toString());
+        }
+    }//GEN-LAST:event_BtnBajaActionPerformed
+
+    private void BtnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBuscarActionPerformed
+        try{
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/sic", "root", "informaticdv2016");
+            PreparedStatement pst = cn.prepareStatement("select * from lineas where codigo_linea = ?");
+            pst.setString(1, TxtBuscar.getText().trim());
+            
+            ResultSet rs = pst.executeQuery();
+            
+            if(rs.next()){
+                TxtCodLin.setText(rs.getString("codigo_linea"));
+                TxtNomLin.setText(rs.getString("nombre_linea"));
+                TxtEstLin.setText(rs.getString("estatus_linea"));
+            } else {
+                JOptionPane.showMessageDialog(null, "LINEA NO REGISTRADA");
+            }
+            
+        }catch (HeadlessException | SQLException e){
+            JOptionPane.showMessageDialog(null, e.toString());
+        }
+    }//GEN-LAST:event_BtnBuscarActionPerformed
+
+    private void BtnCambioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCambioActionPerformed
+        try {
+            String ID = TxtBuscar.getText().trim();
+            
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/sic", "root", "informaticdv2016");
+            PreparedStatement pst = cn.prepareStatement("update lineas set nombre_linea = ?, estatus_linea = ? where codigo_linea = " + ID);
+            
+            pst.setString(1, TxtNomLin.getText().trim());
+            pst.setString(2, TxtEstLin.getText().trim());
+            pst.executeUpdate();
+            
+            JOptionPane.showMessageDialog(null, "MODIFICACION REALIZADA");
+            
+        } catch (HeadlessException | SQLException e) {
+            JOptionPane.showMessageDialog(null, e.toString());
+        }
+    }//GEN-LAST:event_BtnCambioActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
