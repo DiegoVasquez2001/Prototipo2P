@@ -31,6 +31,11 @@ public class FrmContenedor extends javax.swing.JFrame {
         MBCont = new javax.swing.JMenuBar();
         MArch = new javax.swing.JMenu();
         MCat = new javax.swing.JMenu();
+        MIMarc = new javax.swing.JMenuItem();
+        MILin = new javax.swing.JMenuItem();
+        MIBod = new javax.swing.JMenuItem();
+        MIProv = new javax.swing.JMenuItem();
+        MIVend = new javax.swing.JMenuItem();
         MProc = new javax.swing.JMenu();
         MInf = new javax.swing.JMenu();
         MHerr = new javax.swing.JMenu();
@@ -57,6 +62,22 @@ public class FrmContenedor extends javax.swing.JFrame {
         MBCont.add(MArch);
 
         MCat.setText("Catálogos");
+
+        MIMarc.setText("Marcas");
+        MCat.add(MIMarc);
+
+        MILin.setText("Líneas");
+        MCat.add(MILin);
+
+        MIBod.setText("Bodegas");
+        MCat.add(MIBod);
+
+        MIProv.setText("Proveedores");
+        MCat.add(MIProv);
+
+        MIVend.setText("Vendedores");
+        MCat.add(MIVend);
+
         MBCont.add(MCat);
 
         MProc.setText("Procesos");
@@ -130,6 +151,11 @@ public class FrmContenedor extends javax.swing.JFrame {
     private javax.swing.JMenuBar MBCont;
     private javax.swing.JMenu MCat;
     private javax.swing.JMenu MHerr;
+    private javax.swing.JMenuItem MIBod;
+    private javax.swing.JMenuItem MILin;
+    private javax.swing.JMenuItem MIMarc;
+    private javax.swing.JMenuItem MIProv;
+    private javax.swing.JMenuItem MIVend;
     private javax.swing.JMenu MInf;
     private javax.swing.JMenu MProc;
     // End of variables declaration//GEN-END:variables
