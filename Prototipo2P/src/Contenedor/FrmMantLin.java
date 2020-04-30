@@ -234,7 +234,7 @@ public class FrmMantLin extends javax.swing.JInternalFrame {
             String ID = TxtBuscar.getText().trim();
             
             Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/sic", "root", "informaticdv2016");
-            PreparedStatement pst = cn.prepareStatement("update lineas set nombre_linea = ?, estatus_linea = ? where codigo_linea = " + ID);
+            PreparedStatement pst = cn.prepareStatement("update lineas set nombre_linea = ?, estatus_linea = ? where codigo_linea = '" + ID + "'");
             
             pst.setString(1, TxtNomLin.getText().trim());
             pst.setString(2, TxtEstLin.getText().trim());

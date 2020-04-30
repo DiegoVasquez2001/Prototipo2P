@@ -88,9 +88,19 @@ public class FrmContenedor extends javax.swing.JFrame {
         MCat.add(MIBod);
 
         MIProv.setText("Proveedores");
+        MIProv.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MIProvActionPerformed(evt);
+            }
+        });
         MCat.add(MIProv);
 
         MIVend.setText("Vendedores");
+        MIVend.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MIVendActionPerformed(evt);
+            }
+        });
         MCat.add(MIVend);
 
         MBCont.add(MCat);
@@ -141,6 +151,18 @@ public class FrmContenedor extends javax.swing.JFrame {
         frmML.setVisible(true);
         DP_Workbench.add(frmML);
     }//GEN-LAST:event_MILinActionPerformed
+
+    private void MIProvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MIProvActionPerformed
+        FrmMantProv frmMP = new FrmMantProv();
+        frmMP.setVisible(true);
+        DP_Workbench.add(frmMP);
+    }//GEN-LAST:event_MIProvActionPerformed
+
+    private void MIVendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MIVendActionPerformed
+        FrmMantVend frmMV = new FrmMantVend();
+        frmMV.setVisible(true);
+        DP_Workbench.add(frmMV);
+    }//GEN-LAST:event_MIVendActionPerformed
 
     /**
      * @param args the command line arguments

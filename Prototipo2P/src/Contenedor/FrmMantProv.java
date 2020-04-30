@@ -5,6 +5,14 @@
  */
 package Contenedor;
 
+import java.awt.HeadlessException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author diego
@@ -67,12 +75,32 @@ public class FrmMantProv extends javax.swing.JInternalFrame {
         jLabel7.setText("Código Proveedor:");
 
         BtnAlta.setText("Alta");
+        BtnAlta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnAltaActionPerformed(evt);
+            }
+        });
 
         BtnBaja.setText("Baja");
+        BtnBaja.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnBajaActionPerformed(evt);
+            }
+        });
 
         BtnCambio.setText("Cambio");
+        BtnCambio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnCambioActionPerformed(evt);
+            }
+        });
 
         BtnBuscar.setText("Buscar");
+        BtnBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnBuscarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -184,6 +212,102 @@ public class FrmMantProv extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void BtnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBuscarActionPerformed
+        try{
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/sic", "root", "informaticdv2016");
+            PreparedStatement pst = cn.prepareStatement("select * from proveedores where codigo_proveedor = ?");
+            pst.setString(1, TxtBuscar.getText().trim());
+            
+            ResultSet rs = pst.executeQuery();
+            
+            if(rs.next()){
+                TxtCodP.setText(rs.getString("codigo_proveedor"));
+                TxtNomP.setText(rs.getString("nombre_proveedor"));
+                TxtDirP.setText(rs.getString("direccion_proveedor"));
+                TxtTelP.setText(rs.getString("telefono_proveedor"));
+                TxtNitP.setText(rs.getString("nit_proveedor"));
+                TxtEsP.setText(rs.getString("estatus_proveedor"));
+            } else {
+                JOptionPane.showMessageDialog(null, "PROVEEDOR NO REGISTRADO");
+            }
+            
+        }catch (HeadlessException | SQLException e){
+            JOptionPane.showMessageDialog(null, e.toString());
+        }
+    }//GEN-LAST:event_BtnBuscarActionPerformed
+
+    private void BtnAltaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAltaActionPerformed
+        try{
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/sic", "root", "informaticdv2016");
+            PreparedStatement pst = cn.prepareStatement("insert into proveedores values(?,?,?,?,?,?)");
+            
+            pst.setString(1, TxtCodP.getText().trim());
+            pst.setString(2, TxtNomP.getText().trim());
+            pst.setString(3, TxtDirP.getText().trim());
+            pst.setString(4, TxtTelP.getText().trim());
+            pst.setString(5, TxtNitP.getText().trim());
+            pst.setString(6, TxtEsP.getText().trim());
+            pst.executeUpdate();
+            JOptionPane.showMessageDialog(null, "REGISTRO REALIZADO!");
+            TxtCodP.setText("");
+            TxtNomP.setText("");
+            TxtDirP.setText("");
+            TxtTelP.setText("");
+            TxtNitP.setText("");
+            TxtEsP.setText("");
+        }catch (HeadlessException | SQLException e){
+            JOptionPane.showMessageDialog(null, e.toString());
+        }
+    }//GEN-LAST:event_BtnAltaActionPerformed
+
+    private void BtnBajaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBajaActionPerformed
+        try {
+             Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/sic", "root", "informaticdv2016");
+            PreparedStatement pst = cn.prepareStatement("delete from proveedores where codigo_proveedor = ?");
+            
+            pst.setString(1, TxtBuscar.getText().trim());
+            pst.executeUpdate();
+            
+            TxtCodP.setText("");
+            TxtNomP.setText("");
+            TxtDirP.setText("");
+            TxtTelP.setText("");
+            TxtNitP.setText("");
+            TxtEsP.setText("");
+            TxtBuscar.setText("");
+            
+            JOptionPane.showMessageDialog(null, "REGISTRO REMOVIDO!");
+            
+        } catch (HeadlessException | SQLException e) {
+            JOptionPane.showMessageDialog(null, e.toString());
+        }
+    }//GEN-LAST:event_BtnBajaActionPerformed
+
+    private void BtnCambioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCambioActionPerformed
+        try {
+            String ID = TxtBuscar.getText().trim();
+            
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/sic", "root", "informaticdv2016");
+            PreparedStatement pst = cn.prepareStatement("update proveedores set nombre_proveedor = ?, direccion_proveedor = ?, "
+                    + "telefono_proveedor = ?, nit_proveedor = ?, estatus_proveedor = ? "
+                    + "where codigo_proveedor = '" + ID + "'");
+            
+            
+            pst.setString(1, TxtNomP.getText().trim());
+            pst.setString(2, TxtDirP.getText().trim());
+            pst.setString(3, TxtTelP.getText().trim());
+            pst.setString(4, TxtNitP.getText().trim());
+            pst.setString(5, TxtEsP.getText().trim());
+            
+            pst.executeUpdate();
+            
+            JOptionPane.showMessageDialog(null, "MODIFICACION REALIZADA");
+            
+        } catch (HeadlessException | SQLException e) {
+            JOptionPane.showMessageDialog(null, e.toString());
+        }
+    }//GEN-LAST:event_BtnCambioActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
