@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="46cm" height="42cm" viewBox="20 105 907 831" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <ellipse style="fill: #ffffff" cx="131.199" cy="305.948" rx="109.25" ry="109.25"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="131.199" cy="305.948" rx="109.25" ry="109.25"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="131.199" cy="305.948" rx="109.25" ry="109.25"/>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="98.4839" y="288.499">
+    <tspan x="98.4839" y="288.499">       3</tspan>
+    <tspan x="98.4839" y="304.499"></tspan>
+    <tspan x="98.4839" y="320.499">Ventas</tspan>
+  </text>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="235.003" y1="243.305" x2="323.531" y2="189.881"/>
+    <polygon style="fill: #000000" points="232.419,239.024 226.441,248.472 237.586,247.586 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="232.419,239.024 226.441,248.472 237.586,247.586 "/>
+    <polygon style="fill: #000000" points="326.115,194.162 332.093,184.714 320.948,185.6 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="326.115,194.162 332.093,184.714 320.948,185.6 "/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="332.949" y="160.698" width="187" height="47"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="332.949" y="160.698" width="187" height="47"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="330.401" y="159.698" width="46.4516" height="48"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="330.401" y="159.698" width="46.4516" height="48"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="330.401" y="159.698" width="46.4516" height="48"/>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="415.449" y="189.198">
+    <tspan x="415.449" y="189.198">TB_Clientes</tspan>
+  </text>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="353.627" y="183.698">
+    <tspan x="353.627" y="183.698">C</tspan>
+  </text>
+  <g>
+    <ellipse style="fill: #ffffff" cx="703.293" cy="280.269" rx="72.5" ry="72.5"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="703.293" cy="280.269" rx="72.5" ry="72.5"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="703.293" cy="280.269" rx="72.5" ry="72.5"/>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="667.293" y="266.269">
+    <tspan x="667.293" y="266.269">        3.1</tspan>
+    <tspan x="667.293" y="282.269"></tspan>
+    <tspan x="667.293" y="298.269">Alta Clientes</tspan>
+  </text>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 474.793,265.769 A 163.414,163.414 0 0 0 620.569,284.277"/>
+    <polygon style="fill: #000000" points="622.673,289.217 629.874,280.665 618.712,280.035 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="622.673,289.217 629.874,280.665 618.712,280.035 "/>
+  </g>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 775.793,280.269 A 130.081,130.081 0 0 0 834.344,165.093"/>
+    <polygon style="fill: #000000" points="839.763,164.404 833.474,155.16 829.852,165.737 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="839.763,164.404 833.474,155.16 829.852,165.737 "/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="739.841" y="107.169" width="187" height="47"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="739.841" y="107.169" width="187" height="47"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="737.293" y="106.169" width="46.4516" height="48"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="737.293" y="106.169" width="46.4516" height="48"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="737.293" y="106.169" width="46.4516" height="48"/>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="822.341" y="135.669">
+    <tspan x="822.341" y="135.669">TB_Clientes</tspan>
+  </text>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="760.518" y="130.169">
+    <tspan x="760.518" y="130.169">C</tspan>
+  </text>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="478.793" y="304.769">
+    <tspan x="478.793" y="304.769">Datos de Cliente</tspan>
+  </text>
+  <g>
+    <ellipse style="fill: #ffffff" cx="439.881" cy="543.019" rx="72.5" ry="72.5"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="439.881" cy="543.019" rx="72.5" ry="72.5"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="439.881" cy="543.019" rx="72.5" ry="72.5"/>
+  </g>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 224.793,613.519 A 283.326,283.326 0 0 0 295.877,718.961"/>
+    <polygon style="fill: #000000" points="292.463,722.901 303.299,725.654 299,715.333 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="292.463,722.901 303.299,725.654 299,715.333 "/>
+  </g>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 512.381,543.019 A 130.081,130.081 0 0 0 570.932,427.843"/>
+    <polygon style="fill: #000000" points="576.351,427.154 570.063,417.91 566.441,428.487 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="576.351,427.154 570.063,417.91 566.441,428.487 "/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="476.429" y="369.919" width="187" height="47"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="476.429" y="369.919" width="187" height="47"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="473.881" y="368.919" width="46.4516" height="48"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="473.881" y="368.919" width="46.4516" height="48"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="473.881" y="368.919" width="46.4516" height="48"/>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="558.929" y="398.419">
+    <tspan x="558.929" y="398.419">TB_Clientes</tspan>
+  </text>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="497.107" y="392.919">
+    <tspan x="497.107" y="392.919">C</tspan>
+  </text>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="269.381" y="670.519">
+    <tspan x="269.381" y="670.519">Id de Cliente</tspan>
+  </text>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="403.293" y="532.719">
+    <tspan x="403.293" y="532.719">        3.2</tspan>
+    <tspan x="403.293" y="548.719"></tspan>
+    <tspan x="403.293" y="564.719">Baja Clientes</tspan>
+  </text>
+  <g>
+    <ellipse style="fill: #ffffff" cx="366.543" cy="767.269" rx="73.75" ry="73.75"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="366.543" cy="767.269" rx="73.75" ry="73.75"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="366.543" cy="767.269" rx="73.75" ry="73.75"/>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="310.293" y="747.219">
+    <tspan x="310.293" y="747.219">            3.3</tspan>
+    <tspan x="310.293" y="763.219"></tspan>
+    <tspan x="310.293" y="779.219">Busqueda Cliente</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="490.841" y="636.419" width="187" height="47"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="490.841" y="636.419" width="187" height="47"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="488.293" y="635.419" width="46.4516" height="48"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="488.293" y="635.419" width="46.4516" height="48"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="488.293" y="635.419" width="46.4516" height="48"/>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="573.341" y="664.919">
+    <tspan x="573.341" y="664.919">TB_Clientes</tspan>
+  </text>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="511.518" y="659.419">
+    <tspan x="511.518" y="659.419">C</tspan>
+  </text>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 451.237,766.325 A 183.63,183.63 0 0 0 578.116,692.47"/>
+    <polygon style="fill: #000000" points="450.995,761.66 441.291,767.213 451.556,771.644 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="450.995,761.66 441.291,767.213 451.556,771.644 "/>
+    <polygon style="fill: #000000" points="582.584,695.373 583.799,684.259 574.179,689.955 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="582.584,695.373 583.799,684.259 574.179,689.955 "/>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="463.293" y="704.719">
+    <tspan x="463.293" y="704.719">Datos de Cliente</tspan>
+  </text>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 440.293,767.269 A 153.926,153.926 0 0 0 444.975,625.244"/>
+    <polygon style="fill: #000000" points="449.673,622.598 440.376,616.387 440.985,627.551 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="449.673,622.598 440.376,616.387 440.985,627.551 "/>
+  </g>
+  <g>
+    <ellipse style="fill: #ffffff" cx="602.927" cy="862.328" rx="72.5" ry="72.5"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="602.927" cy="862.328" rx="72.5" ry="72.5"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="602.927" cy="862.328" rx="72.5" ry="72.5"/>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="556.427" y="851.628">
+    <tspan x="556.427" y="851.628">        3.4</tspan>
+    <tspan x="556.427" y="867.628"></tspan>
+    <tspan x="556.427" y="883.628">Cambio Cliente</tspan>
+  </text>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="680.426" y="823.628">
+    <tspan x="680.426" y="823.628">Nuevos Datos de Cliente</tspan>
+  </text>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 821.926,857.928 A 144.259,144.259 0 0 0 684.926,856.829"/>
+    <polygon style="fill: #000000" points="682.062,852.23 676.272,861.795 687.398,860.687 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="682.062,852.23 676.272,861.795 687.398,860.687 "/>
+  </g>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 584.341,683.419 A 228.222,228.222 0 0 0 529.275,851.399"/>
+    <polygon style="fill: #000000" points="524.052,852.064 530.298,861.337 533.969,850.776 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="524.052,852.064 530.298,861.337 533.969,850.776 "/>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="411.427" y="846.628">
+    <tspan x="411.427" y="846.628">Datos de Cliente</tspan>
+  </text>
+  <g>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 602.927,789.828 A 82.9279,82.9279 0 0 0 592.303,690.904"/>
+    <polygon style="fill: #000000" points="596.012,686.548 585.113,684.054 589.657,694.269 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="596.012,686.548 585.113,684.054 589.657,694.269 "/>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="624.427" y="742.629">
+    <tspan x="624.427" y="742.629">Actualiza Datos de Cliente</tspan>
+  </text>
+</svg>
