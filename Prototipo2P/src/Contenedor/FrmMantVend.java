@@ -5,6 +5,14 @@
  */
 package Contenedor;
 
+import java.awt.HeadlessException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author diego
@@ -67,12 +75,32 @@ public class FrmMantVend extends javax.swing.JInternalFrame {
         jLabel7.setText("Código Vendedor:");
 
         BtnAlta.setText("Alta");
+        BtnAlta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnAltaActionPerformed(evt);
+            }
+        });
 
         BtnBaja.setText("Baja");
+        BtnBaja.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnBajaActionPerformed(evt);
+            }
+        });
 
         BtnCambio.setText("Cambio");
+        BtnCambio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnCambioActionPerformed(evt);
+            }
+        });
 
         BtnBuscar.setText("Buscar");
+        BtnBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnBuscarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -184,6 +212,102 @@ public class FrmMantVend extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void BtnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBuscarActionPerformed
+        try{
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/sic", "root", "informaticdv2016");
+            PreparedStatement pst = cn.prepareStatement("select * from vendedores where codigo_vendedor = ?");
+            pst.setString(1, TxtBuscar.getText().trim());
+            
+            ResultSet rs = pst.executeQuery();
+            
+            if(rs.next()){
+                TxtCodVend.setText(rs.getString("codigo_vendedor"));
+                TxtNomVend.setText(rs.getString("nombre_vendedor"));
+                TxtDirVend.setText(rs.getString("direccion_vendedor"));
+                TxtTelVend.setText(rs.getString("telefono_vendedor"));
+                TxtNitVend.setText(rs.getString("nit_vendedor"));
+                TxtEstVend.setText(rs.getString("estatus_vendedor"));
+            } else {
+                JOptionPane.showMessageDialog(null, "VENDEDOR NO REGISTRADO");
+            }
+            
+        }catch (HeadlessException | SQLException e){
+            JOptionPane.showMessageDialog(null, e.toString());
+        }
+    }//GEN-LAST:event_BtnBuscarActionPerformed
+
+    private void BtnAltaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAltaActionPerformed
+        try{
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/sic", "root", "informaticdv2016");
+            PreparedStatement pst = cn.prepareStatement("insert into vendedores values(?,?,?,?,?,?)");
+            
+            pst.setString(1, TxtCodVend.getText().trim());
+            pst.setString(2, TxtNomVend.getText().trim());
+            pst.setString(3, TxtDirVend.getText().trim());
+            pst.setString(4, TxtTelVend.getText().trim());
+            pst.setString(5, TxtNitVend.getText().trim());
+            pst.setString(6, TxtEstVend.getText().trim());
+            pst.executeUpdate();
+            JOptionPane.showMessageDialog(null, "REGISTRO REALIZADO!");
+            TxtCodVend.setText("");
+            TxtNomVend.setText("");
+            TxtDirVend.setText("");
+            TxtTelVend.setText("");
+            TxtNitVend.setText("");
+            TxtEstVend.setText("");
+        }catch (HeadlessException | SQLException e){
+            JOptionPane.showMessageDialog(null, e.toString());
+        }
+    }//GEN-LAST:event_BtnAltaActionPerformed
+
+    private void BtnBajaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBajaActionPerformed
+        try {
+             Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/sic", "root", "informaticdv2016");
+            PreparedStatement pst = cn.prepareStatement("delete from vendedores where codigo_vendedor = ?");
+            
+            pst.setString(1, TxtBuscar.getText().trim());
+            pst.executeUpdate();
+            
+            TxtCodVend.setText("");
+            TxtNomVend.setText("");
+            TxtDirVend.setText("");
+            TxtTelVend.setText("");
+            TxtNitVend.setText("");
+            TxtEstVend.setText("");
+            TxtBuscar.setText("");
+            
+            JOptionPane.showMessageDialog(null, "REGISTRO REMOVIDO!");
+            
+        } catch (HeadlessException | SQLException e) {
+            JOptionPane.showMessageDialog(null, e.toString());
+        }
+    }//GEN-LAST:event_BtnBajaActionPerformed
+
+    private void BtnCambioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCambioActionPerformed
+        try {
+            String ID = TxtBuscar.getText().trim();
+            
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/sic", "root", "informaticdv2016");
+            PreparedStatement pst = cn.prepareStatement("update vendedores set nombre_vendedor = ?, direccion_vendedor = ?, "
+                    + "telefono_vendedor = ?, nit_vendedor = ?, estatus_vendedor = ? "
+                    + "where codigo_vendedor = '" + ID +"'");
+            
+            
+            pst.setString(1, TxtNomVend.getText().trim());
+            pst.setString(2, TxtDirVend.getText().trim());
+            pst.setString(3, TxtTelVend.getText().trim());
+            pst.setString(4, TxtNitVend.getText().trim());
+            pst.setString(5, TxtEstVend.getText().trim());
+            
+            pst.executeUpdate();
+            
+            JOptionPane.showMessageDialog(null, "MODIFICACION REALIZADA");
+            
+        } catch (HeadlessException | SQLException e) {
+            JOptionPane.showMessageDialog(null, e.toString());
+        }
+    }//GEN-LAST:event_BtnCambioActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

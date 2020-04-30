@@ -234,7 +234,7 @@ public class FrmMantMarc extends javax.swing.JInternalFrame {
             String ID = TxtBuscar.getText().trim();
             
             Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/sic", "root", "informaticdv2016");
-            PreparedStatement pst = cn.prepareStatement("update marcas set nombre_marca = ?, estatus_marca = ? where codigo_marca = " + ID);
+            PreparedStatement pst = cn.prepareStatement("update marcas set nombre_marca = ?, estatus_marca = ? where codigo_marca = '" + ID + "'");
             
             pst.setString(1, TxtNomMarc.getText().trim());
             pst.setString(2, TxtEstMarc.getText().trim());

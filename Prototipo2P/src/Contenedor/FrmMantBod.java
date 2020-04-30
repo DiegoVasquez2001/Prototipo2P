@@ -234,7 +234,7 @@ public class FrmMantBod extends javax.swing.JInternalFrame {
             String ID = TxtBuscar.getText().trim();
             
             Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/sic", "root", "informaticdv2016");
-            PreparedStatement pst = cn.prepareStatement("update bodegas set nombre_bodega = ?, estatus_bodega = ? where codigo_bodega = " + ID);
+            PreparedStatement pst = cn.prepareStatement("update bodegas set nombre_bodega = ?, estatus_bodega = ? where codigo_bodega = '" + ID + "'");
             
             pst.setString(1, TxtNomBod.getText().trim());
             pst.setString(2, TxtEstBod.getText().trim());
